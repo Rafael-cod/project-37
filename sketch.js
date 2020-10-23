@@ -12,10 +12,11 @@ function preload(){
 }
 
 function setup() {
-	createCanvas(1000, 600);
+	createCanvas(800, 600);
   
 	backGround = createSprite(500,300);
 	backGround.addImage("images/backg.jpg",backGroundImg);
+	backGround.scale = 1.8;
 	backGround.x = backGround.width /2;
 	backGround.velocityX = -4;
 	
@@ -27,7 +28,7 @@ function setup() {
 
 	player = new Player(50,570);
 
-	ground = new Ground(850,590,1725,20);
+	ground = new Ground(850,590,1725,30);
 
 	obstacle = new Obstacle(-50,0,50,50);
 
@@ -62,7 +63,7 @@ function draw() {
 	noStroke();
 	textSize(35);
 	fill(255);
-	text("Score  " + score, 800, 35);
+	text("Score  " + score, 600, 35);
 
 	noStroke();
 	textSize(20);
